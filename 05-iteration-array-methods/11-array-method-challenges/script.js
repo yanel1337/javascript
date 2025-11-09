@@ -37,5 +37,30 @@ const people = [
   },
 ];
 
+const youngPeople = people
+  .filter((person) => person.age <= 25)
+  .map((person) => {
+    return {name: person.firstName + " " + person.lastName, email: person.email};
+});
+
+console.log(youngPeople);
+
 // Challenge 2
 const numbers = [2, -30, 50, 20, -12, -9, 7];
+
+const positiveSum = numbers
+.filter((number) => number >= 0)
+.reduce((acumulator, currentValue) => {
+	return acumulator + currentValue;
+});
+
+console.log(positiveSum);
+
+// challenge 3
+const words = ["coder", "programmer", "developer"];
+
+const capitalizeWords = words.map((word) => {
+	return word.toUpperCase().charAt(0) + word.slice(1);
+});
+
+console.log(capitalizeWords);
